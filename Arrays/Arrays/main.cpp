@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 
 #define tab "\t"
@@ -57,16 +57,16 @@ int main()
 
 	cout << endl;
 
-	cout << "Ñóììà ýëåìåíòîâ ìàññèâà: " << Sum(arr, n) << endl;
-	cout << "Ñðåäíåå àðèôìåòè÷åñêîå ýëåìåíòîâ ìàññèâà: " << Avg(arr, n) << endl;
-	cout << "Ìèíèìàëüíîå çíà÷åíèå â ìàññèâå: " << MinValueIn(arr, n) << endl;
-	cout << "Ìàêñèìàëüíîå çíà÷åíèå â ìàññèâå: " << MaxValueIn(arr, n) << endl;
+	cout << "Ð¡ÑƒÐ¼Ð¼Ð° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð°: " << Sum(arr, n) << endl;
+	cout << "Ð¡Ñ€ÐµÐ´Ð½ÐµÐµ Ð°Ñ€Ð¸Ñ„Ð¼ÐµÑ‚Ð¸Ñ‡ÐµÑÐºÐ¾Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð°: " << Avg(arr, n) << endl;
+	cout << "ÐœÐ¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð² Ð¼Ð°ÑÑÐ¸Ð²Ðµ: " << MinValueIn(arr, n) << endl;
+	cout << "ÐœÐ°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð² Ð¼Ð°ÑÑÐ¸Ð²Ðµ: " << MaxValueIn(arr, n) << endl;
 	int shiftStep = 4;
-	cout << "Ñäâèã ìàññèâà íà " << shiftStep << " ýëåìåíòîâ âëåâî:" << endl;
+	cout << "Ð¡Ð´Ð²Ð¸Ð³ Ð¼Ð°ÑÑÐ¸Ð²Ð° Ð½Ð° " << shiftStep << " ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð²Ð»ÐµÐ²Ð¾:" << endl;
 	ShiftLeft(arr, n, shiftStep);
 	printArr(arr, n);
 	shiftStep = 2;
-	cout << "Ñäâèã ìàññèâà íà " << shiftStep << " ýëåìåíòîâ âïðàâî:" << endl;
+	cout << "Ð¡Ð´Ð²Ð¸Ð³ Ð¼Ð°ÑÑÐ¸Ð²Ð° Ð½Ð° " << shiftStep << " ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð²Ð¿Ñ€Ð°Ð²Ð¾:" << endl;
 	ShiftRight(arr, n, shiftStep);
 	printArr(arr, n);
 
@@ -81,16 +81,16 @@ int main()
 
 	cout << endl;
 
-	cout << "Ñóììà ýëåìåíòîâ ìàññèâà: " << Sum(brr, SIZE) << endl;
-	cout << "Ñðåäíåå àðèôìåòè÷åñêîå ýëåìåíòîâ ìàññèâà: " << Avg(brr, SIZE) << endl;
-	cout << "Ìèíèìàëüíîå çíà÷åíèå â ìàññèâå: " << MinValueIn(brr, SIZE) << endl;
-	cout << "Ìàêñèìàëüíîå çíà÷åíèå â ìàññèâå: " << MaxValueIn(brr, SIZE) << endl;
+	cout << "Ð¡ÑƒÐ¼Ð¼Ð° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð°: " << Sum(brr, SIZE) << endl;
+	cout << "Ð¡Ñ€ÐµÐ´Ð½ÐµÐµ Ð°Ñ€Ð¸Ñ„Ð¼ÐµÑ‚Ð¸Ñ‡ÐµÑÐºÐ¾Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð°: " << Avg(brr, SIZE) << endl;
+	cout << "ÐœÐ¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð² Ð¼Ð°ÑÑÐ¸Ð²Ðµ: " << MinValueIn(brr, SIZE) << endl;
+	cout << "ÐœÐ°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð² Ð¼Ð°ÑÑÐ¸Ð²Ðµ: " << MaxValueIn(brr, SIZE) << endl;
 	shiftStep = 4;
-	cout << "Ñäâèã ìàññèâà íà " << shiftStep << " ýëåìåíòîâ âëåâî:" << endl;
+	cout << "Ð¡Ð´Ð²Ð¸Ð³ Ð¼Ð°ÑÑÐ¸Ð²Ð° Ð½Ð° " << shiftStep << " ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð²Ð»ÐµÐ²Ð¾:" << endl;
 	ShiftLeft(brr, SIZE, shiftStep);
 	printArr(brr, SIZE);
 	shiftStep = 2;
-	cout << "Ñäâèã ìàññèâà íà " << shiftStep << " ýëåìåíòîâ âïðàâî:" << endl;
+	cout << "Ð¡Ð´Ð²Ð¸Ð³ Ð¼Ð°ÑÑÐ¸Ð²Ð° Ð½Ð° " << shiftStep << " ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð²Ð¿Ñ€Ð°Ð²Ð¾:" << endl;
 	ShiftRight(brr, SIZE, shiftStep);
 	printArr(brr, SIZE);
 
