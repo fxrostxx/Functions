@@ -17,10 +17,10 @@ float Sum(float arr[], const int n);
 double Sum(double arr[], const int n);
 char Sum(char arr[], const int n);
 
-int Avg(int arr[], const int n);
-float Avg(float arr[], const int n);
+double Avg(int arr[], const int n);
+double Avg(float arr[], const int n);
 double Avg(double arr[], const int n);
-char Avg(char arr[], const int n);
+double Avg(char arr[], const int n);
 
 int MinValueIn(int arr[], const int n);
 float MinValueIn(float arr[], const int n);
@@ -207,15 +207,15 @@ char Sum(char arr[], const int n)
 	return sum;
 }
 
-int Avg(int arr[], const int n)
+double Avg(int arr[], const int n)
 {
-	int avg = Sum(arr, n) / n;
+	double avg = Sum(arr, n) / n;
 	return avg;
 }
 
-float Avg(float arr[], const int n)
+double Avg(float arr[], const int n)
 {
-	float avg = Sum(arr, n) / n;
+	double avg = Sum(arr, n) / n;
 	return avg;
 }
 
@@ -225,9 +225,9 @@ double Avg(double arr[], const int n)
 	return avg;
 }
 
-char Avg(char arr[], const int n)
+double Avg(char arr[], const int n)
 {
-	char avg = Sum(arr, n) / n;
+	double avg = Sum(arr, n) / n;
 	return avg;
 }
 
