@@ -61,11 +61,14 @@ int main()
 	cout << "Среднее арифметическое элементов массива: " << Avg(arr, n) << endl;
 	cout << "Минимальное значение в массиве: " << MinValueIn(arr, n) << endl;
 	cout << "Максимальное значение в массиве: " << MaxValueIn(arr, n) << endl;
-	int shiftStep = 4;
+	int shiftStep;
+	cout << "Введите количество сдвигов: ";
+	cin >> shiftStep;
 	cout << "Сдвиг массива на " << shiftStep << " элементов влево:" << endl;
 	ShiftLeft(arr, n, shiftStep);
 	printArr(arr, n);
-	shiftStep = 2;
+	cout << "Введите количество сдвигов: ";
+	cin >> shiftStep;
 	cout << "Сдвиг массива на " << shiftStep << " элементов вправо:" << endl;
 	ShiftRight(arr, n, shiftStep);
 	printArr(arr, n);
@@ -85,11 +88,13 @@ int main()
 	cout << "Среднее арифметическое элементов массива: " << Avg(brr, SIZE) << endl;
 	cout << "Минимальное значение в массиве: " << MinValueIn(brr, SIZE) << endl;
 	cout << "Максимальное значение в массиве: " << MaxValueIn(brr, SIZE) << endl;
-	shiftStep = 4;
+	cout << "Введите количество сдвигов: ";
+	cin >> shiftStep;
 	cout << "Сдвиг массива на " << shiftStep << " элементов влево:" << endl;
 	ShiftLeft(brr, SIZE, shiftStep);
 	printArr(brr, SIZE);
-	shiftStep = 2;
+	cout << "Введите количество сдвигов: ";
+	cin >> shiftStep;
 	cout << "Сдвиг массива на " << shiftStep << " элементов вправо:" << endl;
 	ShiftRight(brr, SIZE, shiftStep);
 	printArr(brr, SIZE);
@@ -170,65 +175,49 @@ void sortArr(double arr[], const int n)
 int Sum(int arr[], const int n)
 {
 	int sum{ 0 };
-	for (int i = 0; i < n; ++i)
-	{
-		sum += arr[i];
-	}
+	for (int i = 0; i < n; ++i) sum += arr[i];
 	return sum;
 }
 
 float Sum(float arr[], const int n)
 {
 	float sum{ 0 };
-	for (int i = 0; i < n; ++i)
-	{
-		sum += arr[i];
-	}
+	for (int i = 0; i < n; ++i) sum += arr[i];
 	return sum;
 }
 
 double Sum(double arr[], const int n)
 {
 	double sum{ 0 };
-	for (int i = 0; i < n; ++i)
-	{
-		sum += arr[i];
-	}
+	for (int i = 0; i < n; ++i) sum += arr[i];
 	return sum;
 }
 
 char Sum(char arr[], const int n)
 {
 	char sum{ 0 };
-	for (int i = 0; i < n; ++i)
-	{
-		sum += arr[i];
-	}
+	for (int i = 0; i < n; ++i) sum += arr[i];
 	return sum;
 }
 
 double Avg(int arr[], const int n)
 {
-	double avg = Sum(arr, n) / n;
-	return avg;
+	return (double)Sum(arr, n) / n;
 }
 
 double Avg(float arr[], const int n)
 {
-	double avg = Sum(arr, n) / n;
-	return avg;
+	return (double)Sum(arr, n) / n;
 }
 
 double Avg(double arr[], const int n)
 {
-	double avg = Sum(arr, n) / n;
-	return avg;
+	return (double)Sum(arr, n) / n;
 }
 
 double Avg(char arr[], const int n)
 {
-	double avg = Sum(arr, n) / n;
-	return avg;
+	return (double)Sum(arr, n) / n;
 }
 
 int MinValueIn(int arr[], const int n)
@@ -318,9 +307,9 @@ void ShiftLeft(int arr[], const int n, int shiftStep)
 	for (int i = 0; i < shiftStep; ++i)
 	{
 		temp = arr[0];
-		for (int j = 0; j < n - 1; ++j)
+		for (int j = 1; j < n; ++j)
 		{
-			arr[j] = arr[j + 1];
+			arr[j - 1] = arr[j];
 		}
 		arr[n - 1] = temp;
 	}
@@ -333,9 +322,9 @@ void ShiftLeft(float arr[], const int n, int shiftStep)
 	for (int i = 0; i < shiftStep; ++i)
 	{
 		temp = arr[0];
-		for (int j = 0; j < n - 1; ++j)
+		for (int j = 1; j < n; ++j)
 		{
-			arr[j] = arr[j + 1];
+			arr[j - 1] = arr[j];
 		}
 		arr[n - 1] = temp;
 	}
@@ -348,9 +337,9 @@ void ShiftLeft(double arr[], const int n, int shiftStep)
 	for (int i = 0; i < shiftStep; ++i)
 	{
 		temp = arr[0];
-		for (int j = 0; j < n - 1; ++j)
+		for (int j = 1; j < n; ++j)
 		{
-			arr[j] = arr[j + 1];
+			arr[j - 1] = arr[j];
 		}
 		arr[n - 1] = temp;
 	}
@@ -363,9 +352,9 @@ void ShiftLeft(char arr[], const int n, int shiftStep)
 	for (int i = 0; i < shiftStep; ++i)
 	{
 		temp = arr[0];
-		for (int j = 0; j < n - 1; ++j)
+		for (int j = 1; j < n; ++j)
 		{
-			arr[j] = arr[j + 1];
+			arr[j - 1] = arr[j];
 		}
 		arr[n - 1] = temp;
 	}
@@ -373,60 +362,20 @@ void ShiftLeft(char arr[], const int n, int shiftStep)
 
 void ShiftRight(int arr[], const int n, int shiftStep)
 {
-	int temp;
-	if (shiftStep > n) shiftStep %= n;
-	for (int i = 0; i < shiftStep; ++i)
-	{
-		temp = arr[n - 1];
-		for (int j = n - 1; j > 0; --j)
-		{
-			arr[j] = arr[j - 1];
-		}
-		arr[0] = temp;
-	}
+	ShiftLeft(arr, n, n - shiftStep);
 }
 
 void ShiftRight(float arr[], const int n, int shiftStep)
 {
-	float temp;
-	if (shiftStep > n) shiftStep %= n;
-	for (int i = 0; i < shiftStep; ++i)
-	{
-		temp = arr[n - 1];
-		for (int j = n - 1; j > 0; --j)
-		{
-			arr[j] = arr[j - 1];
-		}
-		arr[0] = temp;
-	}
+	ShiftLeft(arr, n, n - shiftStep);
 }
 
 void ShiftRight(double arr[], const int n, int shiftStep)
 {
-	double temp;
-	if (shiftStep > n) shiftStep %= n;
-	for (int i = 0; i < shiftStep; ++i)
-	{
-		temp = arr[n - 1];
-		for (int j = n - 1; j > 0; --j)
-		{
-			arr[j] = arr[j - 1];
-		}
-		arr[0] = temp;
-	}
+	ShiftLeft(arr, n, n - shiftStep);
 }
 
 void ShiftRight(char arr[], const int n, int shiftStep)
 {
-	char temp;
-	if (shiftStep > n) shiftStep %= n;
-	for (int i = 0; i < shiftStep; ++i)
-	{
-		temp = arr[n - 1];
-		for (int j = n - 1; j > 0; --j)
-		{
-			arr[j] = arr[j - 1];
-		}
-		arr[0] = temp;
-	}
+	ShiftLeft(arr, n, n - shiftStep);
 }
