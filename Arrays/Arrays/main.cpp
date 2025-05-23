@@ -6,41 +6,29 @@ using namespace std;
 void fillArr(int arr[], const int n, int minRand = 0, int maxRand = 100);
 void fillArr(double arr[], const int n, int minRand = 0, int maxRand = 100);
 
-void printArr(int arr[], const int n);
-void printArr(double arr[], const int n);
+template<typename T>
+void printArr(T arr[], const int n);
 
-void sortArr(int arr[], const int n);
-void sortArr(double arr[], const int n);
+template<typename T>
+void sortArr(T arr[], const int n);
 
-int Sum(int arr[], const int n);
-float Sum(float arr[], const int n);
-double Sum(double arr[], const int n);
-char Sum(char arr[], const int n);
+template<typename T>
+T Sum(T arr[], const int n);
 
-double Avg(int arr[], const int n);
-double Avg(float arr[], const int n);
-double Avg(double arr[], const int n);
-double Avg(char arr[], const int n);
+template<typename T>
+double Avg(T arr[], const int n);
 
-int MinValueIn(int arr[], const int n);
-float MinValueIn(float arr[], const int n);
-double MinValueIn(double arr[], const int n);
-char MinValueIn(char arr[], const int n);
+template<typename T>
+T MinValueIn(T arr[], const int n);
 
-int MaxValueIn(int arr[], const int n);
-float MaxValueIn(float arr[], const int n);
-double MaxValueIn(double arr[], const int n);
-char MaxValueIn(char arr[], const int n);
+template<typename T>
+T MaxValueIn(T arr[], const int n);
 
-void ShiftLeft(int arr[], const int n, int shiftStep);
-void ShiftLeft(float arr[], const int n, int shiftStep);
-void ShiftLeft(double arr[], const int n, int shiftStep);
-void ShiftLeft(char arr[], const int n, int shiftStep);
+template<typename T>
+void ShiftLeft(T arr[], const int n, int shiftStep);
 
-void ShiftRight(int arr[], const int n, int shiftStep);
-void ShiftRight(float arr[], const int n, int shiftStep);
-void ShiftRight(double arr[], const int n, int shiftStep);
-void ShiftRight(char arr[], const int n, int shiftStep);
+template<typename T>
+void ShiftRight(T arr[], const int n, int shiftStep);
 
 int main()
 {
@@ -121,8 +109,8 @@ void fillArr(double arr[], const int n, int minRand, int maxRand)
 	}
 }
 
-
-void printArr(int arr[], const int n)
+template<typename T>
+void printArr(T arr[], const int n)
 {
 	for (int i = 0; i < n; ++i)
 	{
@@ -131,16 +119,8 @@ void printArr(int arr[], const int n)
 	cout << endl;
 }
 
-void printArr(double arr[], const int n)
-{
-	for (int i = 0; i < n; ++i)
-	{
-		cout << arr[i] << tab;
-	}
-	cout << endl;
-}
-
-void sortArr(int arr[], const int n)
+template<typename T>
+void sortArr(T arr[], const int n)
 {
 	for (int i = 0; i < n; ++i)
 	{
@@ -148,7 +128,7 @@ void sortArr(int arr[], const int n)
 		{
 			if (arr[j] < arr[i])
 			{
-				int temp = arr[i];
+				T temp = arr[i];
 				arr[i] = arr[j];
 				arr[j] = temp;
 			}
@@ -156,73 +136,24 @@ void sortArr(int arr[], const int n)
 	}
 }
 
-void sortArr(double arr[], const int n)
+template<typename T>
+T Sum(T arr[], const int n)
 {
-	for (int i = 0; i < n; ++i)
-	{
-		for (int j = i + 1; j < n; ++j)
-		{
-			if (arr[j] < arr[i])
-			{
-				double temp = arr[i];
-				arr[i] = arr[j];
-				arr[j] = temp;
-			}
-		}
-	}
-}
-
-int Sum(int arr[], const int n)
-{
-	int sum{ 0 };
+	T sum{ 0 };
 	for (int i = 0; i < n; ++i) sum += arr[i];
 	return sum;
 }
 
-float Sum(float arr[], const int n)
-{
-	float sum{ 0 };
-	for (int i = 0; i < n; ++i) sum += arr[i];
-	return sum;
-}
-
-double Sum(double arr[], const int n)
-{
-	double sum{ 0 };
-	for (int i = 0; i < n; ++i) sum += arr[i];
-	return sum;
-}
-
-char Sum(char arr[], const int n)
-{
-	char sum{ 0 };
-	for (int i = 0; i < n; ++i) sum += arr[i];
-	return sum;
-}
-
-double Avg(int arr[], const int n)
+template<typename T>
+double Avg(T arr[], const int n)
 {
 	return (double)Sum(arr, n) / n;
 }
 
-double Avg(float arr[], const int n)
+template<typename T>
+T MinValueIn(T arr[], const int n)
 {
-	return (double)Sum(arr, n) / n;
-}
-
-double Avg(double arr[], const int n)
-{
-	return (double)Sum(arr, n) / n;
-}
-
-double Avg(char arr[], const int n)
-{
-	return (double)Sum(arr, n) / n;
-}
-
-int MinValueIn(int arr[], const int n)
-{
-	int minValue = arr[0];
+	T minValue = arr[0];
 	for (int i = 1; i < n; ++i)
 	{
 		if (arr[i] < minValue) minValue = arr[i];
@@ -230,39 +161,10 @@ int MinValueIn(int arr[], const int n)
 	return minValue;
 }
 
-float MinValueIn(float arr[], const int n)
+template<typename T>
+T MaxValueIn(T arr[], const int n)
 {
-	float minValue = arr[0];
-	for (int i = 1; i < n; ++i)
-	{
-		if (arr[i] < minValue) minValue = arr[i];
-	}
-	return minValue;
-}
-
-double MinValueIn(double arr[], const int n)
-{
-	double minValue = arr[0];
-	for (int i = 1; i < n; ++i)
-	{
-		if (arr[i] < minValue) minValue = arr[i];
-	}
-	return minValue;
-}
-
-char MinValueIn(char arr[], const int n)
-{
-	char minValue = arr[0];
-	for (int i = 1; i < n; ++i)
-	{
-		if (arr[i] < minValue) minValue = arr[i];
-	}
-	return minValue;
-}
-
-int MaxValueIn(int arr[], const int n)
-{
-	int maxValue = arr[0];
+	T maxValue = arr[0];
 	for (int i = 1; i < n; ++i)
 	{
 		if (arr[i] > maxValue) maxValue = arr[i];
@@ -270,39 +172,10 @@ int MaxValueIn(int arr[], const int n)
 	return maxValue;
 }
 
-float MaxValueIn(float arr[], const int n)
+template<typename T>
+void ShiftLeft(T arr[], const int n, int shiftStep)
 {
-	float maxValue = arr[0];
-	for (int i = 1; i < n; ++i)
-	{
-		if (arr[i] > maxValue) maxValue = arr[i];
-	}
-	return maxValue;
-}
-
-double MaxValueIn(double arr[], const int n)
-{
-	double maxValue = arr[0];
-	for (int i = 1; i < n; ++i)
-	{
-		if (arr[i] > maxValue) maxValue = arr[i];
-	}
-	return maxValue;
-}
-
-char MaxValueIn(char arr[], const int n)
-{
-	char maxValue = arr[0];
-	for (int i = 1; i < n; ++i)
-	{
-		if (arr[i] > maxValue) maxValue = arr[i];
-	}
-	return maxValue;
-}
-
-void ShiftLeft(int arr[], const int n, int shiftStep)
-{
-	int temp;
+	T temp;
 	if (shiftStep > n) shiftStep %= n;
 	for (int i = 0; i < shiftStep; ++i)
 	{
@@ -315,67 +188,8 @@ void ShiftLeft(int arr[], const int n, int shiftStep)
 	}
 }
 
-void ShiftLeft(float arr[], const int n, int shiftStep)
-{
-	float temp;
-	if (shiftStep > n) shiftStep %= n;
-	for (int i = 0; i < shiftStep; ++i)
-	{
-		temp = arr[0];
-		for (int j = 1; j < n; ++j)
-		{
-			arr[j - 1] = arr[j];
-		}
-		arr[n - 1] = temp;
-	}
-}
-
-void ShiftLeft(double arr[], const int n, int shiftStep)
-{
-	double temp;
-	if (shiftStep > n) shiftStep %= n;
-	for (int i = 0; i < shiftStep; ++i)
-	{
-		temp = arr[0];
-		for (int j = 1; j < n; ++j)
-		{
-			arr[j - 1] = arr[j];
-		}
-		arr[n - 1] = temp;
-	}
-}
-
-void ShiftLeft(char arr[], const int n, int shiftStep)
-{
-	char temp;
-	if (shiftStep > n) shiftStep %= n;
-	for (int i = 0; i < shiftStep; ++i)
-	{
-		temp = arr[0];
-		for (int j = 1; j < n; ++j)
-		{
-			arr[j - 1] = arr[j];
-		}
-		arr[n - 1] = temp;
-	}
-}
-
-void ShiftRight(int arr[], const int n, int shiftStep)
-{
-	ShiftLeft(arr, n, n - shiftStep);
-}
-
-void ShiftRight(float arr[], const int n, int shiftStep)
-{
-	ShiftLeft(arr, n, n - shiftStep);
-}
-
-void ShiftRight(double arr[], const int n, int shiftStep)
-{
-	ShiftLeft(arr, n, n - shiftStep);
-}
-
-void ShiftRight(char arr[], const int n, int shiftStep)
+template<typename T>
+void ShiftRight(T arr[], const int n, int shiftStep)
 {
 	ShiftLeft(arr, n, n - shiftStep);
 }
