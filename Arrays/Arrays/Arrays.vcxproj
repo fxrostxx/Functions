@@ -40,7 +40,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -127,21 +127,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\Desktop\sf\FillArr.cpp" />
-    <ClCompile Include="..\..\..\..\..\Desktop\sf\main.cpp" />
-    <ClCompile Include="..\..\..\..\..\Desktop\sf\PrintArr.cpp" />
-    <ClCompile Include="..\..\..\..\..\Desktop\sf\Shift.cpp" />
-    <ClCompile Include="..\..\..\..\..\Desktop\sf\SortArr.cpp" />
-    <ClCompile Include="..\..\..\..\..\Desktop\sf\Statistics.cpp" />
+    <ClCompile Include="FillArr.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="PrintArr.cpp" />
+    <ClCompile Include="Shift.cpp" />
+    <ClCompile Include="SortArr.cpp" />
+    <ClCompile Include="Statistics.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\Desktop\sf\constants.h" />
-    <ClInclude Include="..\..\..\..\..\Desktop\sf\FillArr.h" />
-    <ClInclude Include="..\..\..\..\..\Desktop\sf\PrintArr.h" />
-    <ClInclude Include="..\..\..\..\..\Desktop\sf\Shift.h" />
-    <ClInclude Include="..\..\..\..\..\Desktop\sf\SortArr.h" />
-    <ClInclude Include="..\..\..\..\..\Desktop\sf\Statistics.h" />
-    <ClInclude Include="..\..\..\..\..\Desktop\sf\stdafx.h" />
+    <ClInclude Include="constants.h" />
+    <ClInclude Include="FillArr.h" />
+    <ClInclude Include="PrintArr.h" />
+    <ClInclude Include="Shift.h" />
+    <ClInclude Include="SortArr.h" />
+    <ClInclude Include="Statistics.h" />
+    <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
