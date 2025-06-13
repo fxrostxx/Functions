@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 
 template<typename T> T Factorial(T number);
@@ -13,13 +13,13 @@ int main()
 	DataType number;
 	int power;
 
-	cout << "Ââåäèòå ÷èñëî: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾: ";
 	cin >> number;
-	cout << "Ôàêòîðèàë ÷èñëà: " << Factorial(number) << endl;
+	cout << "Ð¤Ð°ÐºÑ‚Ð¾Ñ€Ð¸Ð°Ð» Ñ‡Ð¸ÑÐ»Ð°: " << Factorial(number) << endl;
 
-	cout << "Ââåäèòå ïîêàçàòåëü ñòåïåíè: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿Ð¾ÐºÐ°Ð·Ð°Ñ‚ÐµÐ»ÑŒ ÑÑ‚ÐµÐ¿ÐµÐ½Ð¸: ";
 	cin >> power;
-	cout << "×èñëî â ñòåïåíè " << power << ": " << Power(number, power) << endl;
+	cout << "Ð§Ð¸ÑÐ»Ð¾ Ð² ÑÑ‚ÐµÐ¿ÐµÐ½Ð¸ " << power << ": " << Power(number, power) << endl;
 
 	return 0;
 }
