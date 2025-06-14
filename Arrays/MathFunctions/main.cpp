@@ -1,10 +1,10 @@
 ﻿#include <iostream>
 using namespace std;
 
-template<typename T> T Factorial(T number);
-template<typename T> T Power(T number, int power);
+int Factorial(int number);
+template<typename T> double Power(T number, int power);
 
-typedef int DataType;
+typedef double DataType;
 
 int main()
 {
@@ -24,10 +24,9 @@ int main()
 	return 0;
 }
 
-template<typename T>
-T Factorial(T number)
+int Factorial(int number)
 {
-	T result{1};
+	int result{1};
 
 	if (number < 0) return 0;
 
@@ -37,11 +36,13 @@ T Factorial(T number)
 }
 
 template<typename T>
-T Power(T number, int power)
+double Power(T number, int power)
 {
 	T result{ 1 };
 
 	if (power == 0) return 1;
+
+	if (power < 0) return 1 / Power(number, -power);
 
 	for (int i = 0; i < power; ++i) result *= number;
 
