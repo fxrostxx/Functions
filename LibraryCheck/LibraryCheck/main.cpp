@@ -1,4 +1,4 @@
-#include <stdafx.h>
+ï»¿#include <stdafx.h>
 #include <constants.h>
 #include <FillArr.h>
 #include <PrintArr.h>
@@ -20,19 +20,19 @@ int main()
 
 	cout << endl;
 
-	cout << "Ñóììà ýëåìåíòîâ ìàññèâà: " << Sum(arr2D, ROWS, COLS) << endl;
-	cout << "Ñðåäíåå àðèôìåòè÷åñêîå ýëåìåíòîâ ìàññèâà: " << Avg(arr2D, ROWS, COLS) << endl;
-	cout << "Ìèíèìàëüíîå çíà÷åíèå â ìàññèâå: " << MinValueIn(arr2D, ROWS, COLS) << endl;
-	cout << "Ìàêñèìàëüíîå çíà÷åíèå â ìàññèâå: " << MaxValueIn(arr2D, ROWS, COLS) << endl;
+	cout << "Ð¡ÑƒÐ¼Ð¼Ð° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð°: " << Sum(arr2D, ROWS, COLS) << endl;
+	cout << "Ð¡Ñ€ÐµÐ´Ð½ÐµÐµ Ð°Ñ€Ð¸Ñ„Ð¼ÐµÑ‚Ð¸Ñ‡ÐµÑÐºÐ¾Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð°: " << Avg(arr2D, ROWS, COLS) << endl;
+	cout << "ÐœÐ¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð² Ð¼Ð°ÑÑÐ¸Ð²Ðµ: " << MinValueIn(arr2D, ROWS, COLS) << endl;
+	cout << "ÐœÐ°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð² Ð¼Ð°ÑÑÐ¸Ð²Ðµ: " << MaxValueIn(arr2D, ROWS, COLS) << endl;
 	int shiftStep;
-	cout << "Ââåäèòå êîëè÷åñòâî ñäâèãîâ: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐ´Ð²Ð¸Ð³Ð¾Ð²: ";
 	cin >> shiftStep;
-	cout << "Ñäâèã ìàññèâà íà " << shiftStep << " ýëåìåíòîâ âëåâî:" << endl;
+	cout << "Ð¡Ð´Ð²Ð¸Ð³ Ð¼Ð°ÑÑÐ¸Ð²Ð° Ð½Ð° " << shiftStep << " ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð²Ð»ÐµÐ²Ð¾:" << endl;
 	ShiftLeft(arr2D, ROWS, COLS, shiftStep);
 	printArr(arr2D, ROWS, COLS);
-	cout << "Ââåäèòå êîëè÷åñòâî ñäâèãîâ: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐ´Ð²Ð¸Ð³Ð¾Ð²: ";
 	cin >> shiftStep;
-	cout << "Ñäâèã ìàññèâà íà " << shiftStep << " ýëåìåíòîâ âïðàâî:" << endl;
+	cout << "Ð¡Ð´Ð²Ð¸Ð³ Ð¼Ð°ÑÑÐ¸Ð²Ð° Ð½Ð° " << shiftStep << " ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð²Ð¿Ñ€Ð°Ð²Ð¾:" << endl;
 	ShiftRight(arr2D, ROWS, COLS, shiftStep);
 	printArr(arr2D, ROWS, COLS);
 
