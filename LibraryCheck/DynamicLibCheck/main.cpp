@@ -1,4 +1,3 @@
-#include <iostream>
 #include <stdafx.h>
 #include <constants.h>
 #include <FillArr.h>
