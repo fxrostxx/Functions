@@ -1,4 +1,6 @@
-#include "SortArr.h"
+#include "stdafx.h"
+#include "constants.h"
+import SortArr;
 
 template<typename T>
 void sortArr(T arr[], const int n)

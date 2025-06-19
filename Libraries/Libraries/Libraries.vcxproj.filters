@@ -33,6 +33,18 @@
     <ClCompile Include="Statistics.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="PrintArr.ixx">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Shift.ixx">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SortArr.ixx">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Statistics.ixx">
+      <Filter>Header Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -42,18 +54,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FillArr.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PrintArr.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Shift.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SortArr.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Statistics.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

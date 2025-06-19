@@ -1,4 +1,6 @@
-#include "PrintArr.h"
+#include "stdafx.h"
+#include "constants.h"
+import PrintArr;
 
 template<typename T>
 void printArr(T arr[], const int n)

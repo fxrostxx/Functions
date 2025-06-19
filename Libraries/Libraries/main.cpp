@@ -1,10 +1,16 @@
+/*
+https://stackoverflow.com/questions/5416872/using-export-keyword-with-templates
+https://devblogs.microsoft.com/cppblog/a-tour-of-cpp-modules-in-visual-studio/
+https://thecodehound.com/modules-in-c20/
+*/
+
 #include "stdafx.h"
 #include "constants.h"
 #include "FillArr.h"
-#include "PrintArr.h"
-#include "SortArr.h"
-#include "Statistics.h"
-#include "Shift.h"
+import PrintArr;
+import SortArr;
+import Statistics;
+import Shift;
 
 //int main()
 //{

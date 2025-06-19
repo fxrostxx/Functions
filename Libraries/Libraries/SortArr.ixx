@@ -1,7 +1,11 @@
-#pragma once
+module;
+
+#include "stdafx.h"
 #include "constants.h"
 
-template<typename T>
+export module SortArr;
+
+export template<typename T>
 void sortArr(T arr[], const int n);
-template<typename T>
+export template<typename T>
 void sortArr(T arr[ROWS][COLS], const int ROWS, const int COLS);

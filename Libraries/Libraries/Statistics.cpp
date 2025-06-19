@@ -1,4 +1,6 @@
-#include "Statistics.h"
+#include "stdafx.h"
+#include "constants.h"
+import Statistics;
 
 template<typename T>
 T Sum(T arr[], const int n)

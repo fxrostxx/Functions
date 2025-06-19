@@ -1,4 +1,6 @@
-#include "Shift.h"
+#include "stdafx.h"
+#include "constants.h"
+import Shift;
 
 template<typename T>
 void ShiftLeft(T arr[], const int n, int shiftStep)
